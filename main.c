@@ -13,8 +13,16 @@
  **/
 int day_of_the_year(int day, int month, int year)
 {
+    int amount = 0;
+    for(int i = 0; i > month;i++)
+    {
+        amount = amount + get_days_for_month(i+1);
+    }
+    amount = amount + day;
 
-    return 0;
+
+    return amount;
+
 }
 
 /**
@@ -53,6 +61,61 @@ int isLeapyear(int year)
 
     return 0;
 }
+
+/**
+ * name: get_days_for_month
+ * parameters: int month, int year
+ * return: days in given month/year between 28-31, -1 when year or month is invalid
+ * description: The function retuns the amount of days in the given month/year. The value for month
+ has to be between 1-12. Includes leap years
+ **/
+
+int get_days_for_month(int month, int year)
+{
+    if (isLeapyear(year)== 0)
+    {
+        int monthlen[12] = {31,28,31,30,31,30,31,31,30,31,30,31};
+        return monthlen[month+1];
+    }
+    else if(isLeapyear(year) == 1)
+    {
+        int monthlen[12] = {31,29,31,30,31,30,31,31,30,31,30,31};
+        return monthlen[month+1];
+    }
+
+    else
+    {
+        return -1;
+    }
+}
+
+/**
+ * name: exists_date
+ * parameters: int day, int month, int year
+ * return: 1 if date is valid, 0 if date is invalid
+ * description: The function checks if the given date is between 1.1.1582 and 31.12.2018
+ **/
+
+int exists_date(int day,int month, int year)
+{
+    if(year < 1582 || year > 2400)
+    {
+        return 0;
+    }
+    else if(month < 1 || month > 12)
+    {
+       return 0;
+    }
+    else if(day < 1 || day > get_days_for_month(month,year))
+    {
+        return 0;
+    }
+    else
+    {
+        return 1;
+    }
+}
+
 
 int main()
 {
