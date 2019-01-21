@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1548068484 source:d:\timelib\main.c
+	<stdio.h>
+	<stdlib.h>
+	"time.h"
+
+1548068484 d:\timelib\time.h
+
+1548068484 source:d:\timelib\time.c
+
