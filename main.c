@@ -8,8 +8,10 @@
 #include <stdlib.h>
 
 /**
- *
- *
+ * name: day_of_the_year
+ * parameters: int day, int month, int year
+ * return: number of the day: int
+ * description: the function calculates the number of the given date in the given year
  **/
 int day_of_the_year(int day, int month, int year)
 {
