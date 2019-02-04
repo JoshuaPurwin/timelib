@@ -93,7 +93,7 @@ int get_days_for_month(int month, int year)
  * description: The function checks if the given date is between 1.1.1582 and 31.12.2018
  **/
 
-int exists_date(int day,int month, int year)
+int exists_date(int day, int month, int year)
 {
     if(year < 1582 || year > 2400)
     {
@@ -121,7 +121,7 @@ int input_date(int *day, int *month, int *year)
     scanf("%i",day);
     scanf("%i",month);
     scanf("%i",year);
-    }while(exists_date(day,month,year) != 1);
+    }while(exists_date(*day, *month, *year) != 1);
 
 }
 
