@@ -10,6 +10,8 @@
 
 int main()
 {
-    printf("Tag des Jahres: %i\n", day_of_the_year(31, 12, 2400));
+    int day = 0, month = 0, year = 0;
+    input_date(&day, &month, &year);
+    printf("Tag des Jahres: %i\n", day_of_the_year(day, month, year));
     return 0;
 }

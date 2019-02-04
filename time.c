@@ -113,3 +113,20 @@ int exists_date(int day,int month, int year)
     }
 }
 
+int input_date(int *day, int *month, int *year)
+{
+    do
+    {
+    printf("Bitte einen Tag, Monat und Jahr angeben\n");
+    scanf("%i",day);
+    scanf("%i",month);
+    scanf("%i",year);
+    }while(exists_date(day,month,year) != 1);
+
+}
+
+
+
+
+
+

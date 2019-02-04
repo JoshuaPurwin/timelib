@@ -8,3 +8,12 @@
 
 1548068484 source:d:\timelib\time.c
 
+1549276274 source:g:\timelib\main.c
+	<stdio.h>
+	<stdlib.h>
+	"time.h"
+
+1549275006 g:\timelib\time.h
+
+1549276444 source:g:\timelib\time.c
+
