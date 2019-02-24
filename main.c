@@ -10,8 +10,8 @@
 
 int main()
 {
-    int day = 0, month = 0, year = 0;
-    input_date(&day, &month, &year);
-    printf("Tag des Jahres: %i\n", day_of_the_year(day, month, year));
+    struct date curdate;
+    input_date(&curdate);
+    printf("Tag des Jahres: %i\n", day_of_the_year(curdate));
     return 0;
 }

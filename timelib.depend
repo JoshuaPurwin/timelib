@@ -1,12 +1,13 @@
 # depslib dependency file v1.0
-1548068484 source:d:\timelib\main.c
+1551019330 source:d:\timelib\main.c
 	<stdio.h>
 	<stdlib.h>
 	"time.h"
 
-1548068484 d:\timelib\time.h
+1551019308 d:\timelib\time.h
 
-1548068484 source:d:\timelib\time.c
+1551019290 source:d:\timelib\time.c
+	"time.h"
 
 1549276274 source:g:\timelib\main.c
 	<stdio.h>
