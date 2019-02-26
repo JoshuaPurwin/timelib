@@ -24,7 +24,7 @@ int day_of_the_year(struct date curdate)
 }
 
 /**
-Bezeichner: isLeapyear
+Bezeichner: is_leapyear
 Übergabeparameter: int year
 Rückgabewert: int
 0, wenn das übergebene Jahr kein Schaltjahr ist
@@ -34,7 +34,7 @@ Beschreibung: Die Funktion übermittelt für ein übergebens Jahr ob es sich
 um ein Schaltjahr handelt
 */
 
-int isLeapyear(struct date curdate)
+int is_leapyear(struct date curdate)
 {
     if(curdate.year<1582)
     {
@@ -70,12 +70,12 @@ int isLeapyear(struct date curdate)
 
 int get_days_for_month(int month, struct date curdate)
 {
-    if (isLeapyear(curdate)== 0)
+    if (is_leapyear(curdate)== 0)
     {
         int monthlen[12] = {31,28,31,30,31,30,31,31,30,31,30,31};
         return monthlen[month-1];
     }
-    else if(isLeapyear(curdate) == 1)
+    else if(is_leapyear(curdate) == 1)
     {
         int monthlen[12] = {31,29,31,30,31,30,31,31,30,31,30,31};
         return monthlen[month-1];

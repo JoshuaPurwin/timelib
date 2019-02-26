@@ -9,7 +9,7 @@ struct date
 };
 
 int day_of_the_year(struct date curdate);
-int isLeapyear(struct date curdate);
+int is_leapyear(struct date curdate);
 int get_days_for_month(int month, struct date curdate);
 int exists_date(struct date curdate);
 void input_date(struct date *curdate);
